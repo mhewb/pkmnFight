@@ -1,0 +1,66 @@
+
+@font-face {
+    font-family: "Pokemon Classic";
+    src: url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.eot"); src: url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.woff") format("woff"), url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/900f8add35323c44ee840c611ed9a7a5.svg#Pokemon Classic") format("svg"); }
+
+html, body, * {
+    margin:  0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Pokemon Classic';
+    background-color: #A0960E;
+}
+
+h1 {
+    text-align: center;
+    margin: 2em auto;
+    text-shadow: .1em .1em rgba(0, 0, 255, .5), -.1em -.1em rgba(255, 0, 0, .5);
+    font-size:3em;
+}
+
+main {
+    width: 80%;
+    margin:1em auto;
+    background-color: black;
+    border-radius: 20% / 10%;
+    padding: 1.7em;
+    box-shadow:.7em .7em #655F0C;
+
+}
+
+main > div {
+    display: flex;
+    flex-wrap: row nowrap;
+    align-items: center;
+    width: 90%;
+}
+
+#light {
+    margin:0 auto;
+    background-color: red;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    box-shadow: 0 0 1.5em red;
+    border: 1px solid black;
+
+}
+
+#cmbt {
+    width:80%;
+    max-height: 700px;
+    overflow-y: scroll;
+    margin: 0em auto;
+    border: double 10px black;
+    background-color: #90870E;
+    border-radius: 10px;
+    box-shadow: inset 1em 1em 0 #655F0C, inset -.5em -.5em 0 #655F0C;
+    padding: 1.5em;
+}
+
+p {
+    margin: .2em;
+}

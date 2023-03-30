@@ -1,6 +1,29 @@
 import Pkmn from "./modules/Pkmn.js";
 import Attack from "./modules/Attack.js";
 
+function pkmnFight(fighters, starter) {
+
+    let i = starter;
+    let j, temp;
+    if (i == 0) {
+        j = 1;
+    } else {
+        j = 0;
+    }
+
+    out += `the starting pkmn is ${fighters[i].name}, let the combat begin!\n`
+
+    do {
+        out += fighters[i].fight(fighters[j]);
+        temp = i;
+        i = j;
+        j = temp;
+    }
+    while (fighters[0].currentHP > 0 && fighters[1].currentHP > 0);
+
+    out += `The fight is over.`;
+}
+
 let pikachu = new Pkmn(
     'Pikachu',
     25,
@@ -29,28 +52,23 @@ let evoli = new Pkmn(
 
 console.log(pikachu);
 console.log(evoli);
+let out = "";
+let divOut = "";
+
+out += `The fighters are ${pikachu.name} and ${evoli.name},\n`
 
 let starter = Math.floor(Math.random() * 2)
 
-function pkmnFight(fighters, starter) {
 
-    let i = starter;
-    let j, temp;
-    if (i == 0) {
-        j = 1;
-    } else {
-        j = 0;
-    }
 
-    do {
-        fighters[i].fight(fighters[j]);
-        temp = i;
-        i = j;
-        j = temp;
-    }
-    while (fighters[0].currentHP > 0 && fighters[1].currentHP > 0)
+pkmnFight([pikachu, evoli], starter);
 
-    console.log(`The fight is over.`);
+let div = document.getElementById('cmbt');
+
+let arrStr = out.split('\n');
+for (let i = 0; i < arrStr.length; i++) {
+    divOut += `<p>${arrStr[i]}</p>\n`
 }
 
-pkmnFight([pikachu, evoli], starter)
+
+div.innerHTML = divOut;
