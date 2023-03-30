@@ -1,7 +1,7 @@
 import Pkmn from "./modules/Pkmn.js";
 import Attack from "./modules/Attack.js";
 
-let pika = new Pkmn(
+let pikachu = new Pkmn(
     'Pikachu',
     25,
     40,
@@ -27,7 +27,7 @@ let evoli = new Pkmn(
     ],
 );
 
-console.log(pika);
+console.log(pikachu);
 console.log(evoli);
 
 let starter = Math.floor(Math.random() * 2)
@@ -50,10 +50,7 @@ function pkmnFight(fighters, starter) {
     }
     while (fighters[0].currentHP > 0 && fighters[1].currentHP > 0)
 
-    console.log(`Combat is over`);
+    console.log(`The fight is over.`);
 }
 
-pkmnFight([pika, evoli], starter)
-
-let div = document.getElementById('cmbt')
-div.innerHTML = pkmnFight
+pkmnFight([pikachu, evoli], starter)

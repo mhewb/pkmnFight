@@ -35,6 +35,7 @@ export default class Pkmn{
 
         if (target.currentHP <= 0) {
             console.log(`${target.name} is DEAD (${target.currentHP} <= 0)`);
+            console.log(`${this.name} is the winner!`);
         } else {
             console.log(`${target.name} current HP is ${target.currentHP}`);
         }
@@ -49,6 +50,4 @@ function criticalStrike(){
         return true;
     }
     return false;
-
-
 }
