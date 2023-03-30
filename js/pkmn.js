@@ -70,5 +70,4 @@ for (let i = 0; i < arrStr.length; i++) {
     divOut += `<p>${arrStr[i]}</p>\n`
 }
 
-
 div.innerHTML = divOut;
