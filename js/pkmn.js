@@ -59,8 +59,6 @@ out += `The fighters are ${pikachu.name} and ${evoli.name},\n`
 
 let starter = Math.floor(Math.random() * 2)
 
-
-
 pkmnFight([pikachu, evoli], starter);
 
 let div = document.getElementById('cmbt');
