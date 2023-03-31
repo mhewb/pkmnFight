@@ -1,5 +1,5 @@
-import Pkmn from "./modules/Pkmn.js";
-import Attack from "./modules/Attack.js";
+import Pkmn from "./modules/Pkmn.mjs";
+import Attack from "./modules/Attack.mjs";
 
 function pkmnFight(fighters, starter) {
 
